@@ -1,13 +1,8 @@
 # netlify-functions
-This only works if you comment out the line
+For some reason, this only works OUTSIDE of my npm monorepo. If I move it inside the repo and hoist its npm_modules, `npm run serve` gives the following error:
 
-    const mongodb = require('mongodb')
+    ERROR in ... monorepo/node_modules/@aws-sdk/client-sso/dist-es/protocols/Aws_restJson1.js
 
-in `src/api.js`. No idea why.
+    Module parse failed: Unexpected token (10:37)
 
-To test this out:
-
-    git clone https://github.com/ms2d/netlify-functions.git
-    cd netlify-functions
-    npm install
-    npm run serve
+No idea why...
