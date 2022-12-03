@@ -1,9 +1,5 @@
 # netlify-functions
-For some reason, this only works OUTSIDE of my npm monorepo. If I move it inside the repo and hoist its npm_modules, `npm run serve` gives the following error:
-
-    ERROR in ... monorepo/node_modules/@aws-sdk/client-sso/dist-es/protocols/Aws_restJson1.js
-
-    Module parse failed: Unexpected token (10:37)
+For some reason, this only works OUTSIDE of my npm monorepo. No idea why.
 
 To test this out,
 
@@ -11,5 +7,3 @@ To test this out,
     cd netlify-functions
     npm install
     npm run build
-
-Then try moving it into a monorepo, using npm workspaces `npm run build` and... crash. Hmm...
