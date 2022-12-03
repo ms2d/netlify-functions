@@ -5,4 +5,11 @@ For some reason, this only works OUTSIDE of my npm monorepo. If I move it inside
 
     Module parse failed: Unexpected token (10:37)
 
-No idea why...
+To test this out,
+
+    git clone https://github.com/ms2d/netlify-functions.git
+    cd netlify-functions
+    npm install
+    npm run build
+
+Then try moving it into a monorepo, using npm workspaces `npm run build` and... crash. Hmm...
